@@ -1,0 +1,288 @@
+/* 首页CSS样式 */
+
+/* 设置版心居中 */
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+
+/* 背景颜色 */
+body{
+    background-color: #f3f5f7;
+}
+
+/* 头部 */
+.header{
+    height: 100px;
+    background-color: #fff;
+}
+.header .wrapper{
+    display: flex;
+    padding-top: 29px;
+}
+/* logo */
+.logo h1 a{
+    /* 要想宽高生效，得换样式 */
+    display: block;
+
+    width: 195px;
+    height: 41px;
+    font-size:0;
+    background-image: url(../images/logo.png);
+}
+
+/* 导航区域 */
+.nav{
+    margin-left: 102px;
+}
+.nav ul{
+    display: flex;
+   
+}
+.nav li{
+    margin-right: 24px;
+}
+.nav li a{
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size:19px;
+}
+
+.nav li .active,
+.nav li:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+
+
+/* header中的搜索区域:input+a */
+.search{
+    display: flex;
+    margin-left: 64px;
+    padding-left: 19px;
+    padding-right: 12px;
+
+    /* width: 412px; */
+    width: 500px;
+    height: 45px; 
+    background-color: #f3f5f7;
+    border-radius: 20px;
+}
+.search input{
+    /* 设置弹性伸缩比，flex=1 */
+    flex: 1;
+    /* 去掉显示边框 */
+    border: 0;
+    /* 去掉焦点框，点击框之后也不会显示 */
+    outline: none;
+
+    /* 设置背景颜色透明 */
+    background-color: transparent;
+}
+.search input::placeholder{
+    font-size: 14px;
+    color: #999;
+}
+
+.search a{
+
+    /* 设置侧轴居中 */
+    align-self: center;
+
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/search.png);
+
+}
+
+/* 设置header中的用户区域 */
+.user {
+    margin-left: 32px;
+}
+.user img{
+    /* 设置后面的文字垂直居中 */
+    vertical-align: middle;
+}
+.user span{
+    margin-left:7px ;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* 2.banner区域 */
+.banner{
+    height:-420px;
+    background-color: #0092cb;
+}
+.banner .wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background:url(../images/banner.png);  
+}
+.banner .left {
+    padding: 3px 20px;
+
+    width: 191px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.42);
+}
+.banner .left a{
+    /* block宽度默认为父级的100% */
+    display: block;
+    height: 46px;
+    color: #fff;
+    line-height: 46px;
+    font-size: 16px;
+
+    background:url(../images/right.png) no-repeat right center;
+}
+.banner .left a:hover{
+    background: url(../images/right-hover.png) no-repeat right center;
+    color: #00a4ff;
+}
+/* right 课程表区域 */
+.banner .right{
+    margin-top:60px;
+
+    width:218px ;
+    height:305px ;
+    background-color: #209dd5;
+    border-radius: 10px;
+}
+.banner .right h3{
+    margin-left: 14px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+.banner .right .content{
+    padding: 14px;
+    height: 257px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.banner .right .content dl{
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.banner .right dt{
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+.banner .right dd{
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.banner .right dd span{
+    color: #00a4ff;
+}
+.banner .right dd strong span{
+    color: #7d7d7d;
+    font-weight: 400;
+}
+.banner .right a{
+    display: block;
+    height: 32px;
+    background-color: #00a4ff;
+    text-align: center;
+    line-height: 32px;
+    font-size:14px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+/* 3.精品推荐区域 */
+.recommend{
+    display: flex;
+    margin-top: 11px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(211,211,211,0.5);
+    line-height: 60px;
+    
+}
+.recommend h3{
+    font-size: 18px;
+    font-weight: 400;
+    color: #00a4ff;
+    margin-right: 10px;
+}
+.recommend ul{
+    display: flex;
+    flex:1;
+}
+.recommend li a{
+    padding: 0 24px;
+    border-right: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+/* 去掉最后一个的右边框线 */
+.recommend ul li:last-child a{
+    border-right:none;
+}
+.recommend .modify{
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+
+
+
+/* 展示内容区域 */
+.show{
+    
+    height: 850px;
+    /* background-color: pink; */
+}
+.show ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.show li a{
+    display: block;
+    width: 225px;
+    height: 195px;
+    /* background-color: yellow; */
+    flex: 0 0 calc(20% - 4px); /* 每行显示5个盒子，减去间距占据的宽度 */
+    margin-bottom: 8px;
+    text-align: center;
+}
+.show li div{
+
+    font-size:20px;
+    font-weight: 700;
+}
+.show li strong div{
+    font-size: 16px;
+    font-weight: 400;
+}
+/* 修改 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
