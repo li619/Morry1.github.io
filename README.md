@@ -1,2 +1,2 @@
 # Morry.github.io
-24 Web开发
+24 Web全栈课程
