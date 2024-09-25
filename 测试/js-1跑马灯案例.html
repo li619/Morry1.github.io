@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="text">欢迎中国联通领导高倩莅临指导</span>
+
+    <script>
+
+        // 创建一个函数，让文本中的第一个字放到最后去
+        function show(){
+            let lab = document.getElementById("text");
+            let str = lab.innerText;
+            let first = str[0];//获得第一个字
+            let new_str = str.substring(1,str.length);//获得剩余的字符串
+            new_str += first;//拼接字符串
+            lab.innerText = new_str;//更新在浏览器中的文本
+        }
+        
+        setInterval(show,1000);//每隔一秒调用一次show函数，js中的定时器
+    </script>
+</body>
+</html>

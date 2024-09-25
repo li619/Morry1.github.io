@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id ="citys">
+        <!-- <li>北京</li> -->
+    </ul>
+
+    <script>
+        //虽然没有事件触发，但是js中的代码是肯定会执行的，只是没有加约束条件了
+        let city_lists = ["北京","上海","深圳","长沙6"];
+        for(var idx in city_lists){
+            //创建一个li标签
+            tag = document.createElement("li");
+            tag.innerText = city_lists[idx];//给li标签添加文本
+
+            //把li标签添加到ul中
+            let parentTag = document.getElementById("citys");
+            parentTag.appendChild(tag);//添加到父标签中去
+        }
+        
+    </script>
+</body>
+</html>

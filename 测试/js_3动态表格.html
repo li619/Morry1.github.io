@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态表格</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>id</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </thead>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>1</td>
+                <td>小红</td>
+                <td>18</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+        info = {id:1,name:"小红",age:18};
+        //创建一个tr标签
+        tr_tag = document.createElement("tr");
+        for(let key in info){
+            text = info[key]
+            //创建一个td标签
+            td_tag = document.createElement("td");
+            td_tag.innerText = text;
+            //把td标签添加到tr标签中5
+            tr_tag.appendChild(td_tag);
+        }
+
+        //把tr标签添加到tbody中
+        let parentTag = document.getElementById("tbody");
+        parentTag.appendChild(tr_tag);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件的绑定</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入内容" id ="text">
+    <input type="button" value="点击添加" onclick="buttonClick()" >
+
+    <ul id ="ul">
+
+    </ul>
+
+    <script>
+        //实现用户在输入框中输入内容添加到ul中 功能
+        function buttonClick(){
+            //1.获取用户输入的那个标签
+            let userTag = document.getElementById("text");
+            //2.获取用户输入的内容
+            userContent = userTag.value;
+            //3.检查是否为空
+            if(userContent.length > 0){
+                //4.创建一个li标签
+                let liTag = document.createElement("li");
+                liTag.innerText = userContent;
+
+                //5.把li标签添加到ul中
+                let parentTag = document.getElementById("ul");
+                parentTag.appendChild(liTag);
+
+                //6.清空输入框
+                userTag.value = "";
+            }else{
+                alert("输入的内容不能为空");
+            }
+        }
+
+    </script>
+</body>
+</html>
