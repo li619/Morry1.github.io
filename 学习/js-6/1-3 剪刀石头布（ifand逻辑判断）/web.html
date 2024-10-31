@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剪刀石头布</title>
+    <style>
+        p{
+            font-size: 30px;
+        }
+        button{
+            font-size: 30px;
+            margin-right: 20px;
+            width: 100px;
+            /* border: 2px solid rgb(84, 80, 80); */
+        }
+    </style>
+</head>
+<body>
+    <p>请选择剪刀石头布</p>
+    <button onclick='
+        personChoice = "剪刀";
+        // console.log(personChoice);
+        modifyAndShow();//更新
+
+    '>剪刀</button>
+    <button onclick='
+        personChoice = "石头";
+        // console.log(personChoice);
+        modifyAndShow();//更新
+
+    '>石头</button>
+    <button onclick='
+        personChoice = "布";
+        // console.log(personChoice);
+        modifyAndShow();//更新
+
+    '>布</button>
+    
+
+    <script>
+        let personChoice;
+        function modifyAndShow()//更新
+        {   
+            let computerChoice = Math.random()*3;
+            let computerChoiceNum = Math.floor(computerChoice);
+            // console.log(computerChoice);
+            // console.log(computerChoiceNum);
+            // 0-剪刀 1-石头 2-布
+            if(computerChoiceNum == 0){
+                if(personChoice==='剪刀'){
+                    alert(`你出${personChoice} 电脑出剪刀，此局平手!`);
+                }
+                else if(personChoice==='石头'){
+                    alert(`你出${personChoice} 电脑出剪刀，此局你获胜!`);
+                }
+                else{
+                    alert(`你出${personChoice} 电脑出剪刀，此局你输了!`);
+                }
+                
+            }else if(computerChoiceNum == 1){
+                if(personChoice==='剪刀'){
+                    alert(`你出${personChoice} 电脑出石头，此局你输了!`);
+                }
+                else if(personChoice==='石头'){
+                    alert(`你出${personChoice} 电脑出石头，此局平手!`);
+                }
+                else{
+                    alert(`你出${personChoice} 电脑出石头，此局你获胜!`);
+                }
+            }
+            else{
+                if(personChoice==='剪刀'){
+                    alert(`你出${personChoice} 电脑出布，此局你获胜!`);
+                }
+                else if(personChoice==='石头'){
+                    alert(`你出${personChoice} 电脑出布，此局你输了!`);
+                }
+                else{
+                    alert(`你出${personChoice} 电脑出布，此局平手!`);
+                }
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>取得使用者輸入</title>
+    </head>
+    <body>
+        <input class="inputHeight" placeholder="請輸入身高(公分)">
+        <button onclick="calculateHeight();">計算</button>
+        <p class="convertHeight">身高: 公尺</p>
+
+        <script>
+            function calculateHeight() {
+                let height = document.querySelector('input').value;
+                height = Number(height);
+                height /= 100;
+                console.log(height);
+                document.querySelector('p').innerHTML = `
+                    身高: ${height}公尺
+                `;
+            }
+
+            let num = String(10);
+            console.log(typeof num);
+
+        </script>
+    </body>
+</html>

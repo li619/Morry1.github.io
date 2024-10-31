@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>函數回傳 return</title>
+        <style>
+            p{
+                font-size: 30px;
+            }
+            button{
+                font-size: 30px;
+                margin-right: 20px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>請選擇 剪刀 石頭 布</p>
+        <button onclick='
+            const computerChoice = generateComputerChoice();
+
+            if (computerChoice === "剪刀") {
+                alert(`你出剪刀 電腦出${computerChoice}，此局平手!`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出剪刀 電腦出${computerChoice}，此局你輸了!`);
+            } else {
+                alert(`你出剪刀 電腦出${computerChoice}，此局你贏了!`);
+            }
+
+        '>剪刀</button>
+        <button  onclick='
+            const computerChoice = generateComputerChoice();
+
+            if (computerChoice === "剪刀") {
+                alert(`你出石頭 電腦出${computerChoice}，此局你贏了!`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出石頭 電腦出${computerChoice}，此局平手!`);
+            } else {
+                alert(`你出石頭 電腦出${computerChoice}，此局你輸了!`);
+            }
+
+        '>石頭</button>
+        <button   onclick='
+            const computerChoice = generateComputerChoice();
+
+            if (computerChoice === "剪刀") {
+                alert(`你出布 電腦出${computerChoice}，此局你輸了!`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出布 電腦出${computerChoice}，此局你贏了!`);
+            } else {
+                alert(`你出布 電腦出${computerChoice}，此局平手!`);
+            }
+
+        '>布</button>
+
+        <script>
+            // 函數(函式) function
+            // 函數 : 讓我們重複使用一段程式碼
+            // 功能 : 製作好功能 想使用就拿出來用
+            
+            function generateComputerChoice() {
+                const randomNum = Math.random()*3;
+                let computerChoice = "";
+                console.log(randomNum);
+                if (0<=randomNum && randomNum<1) {
+                    computerChoice = "剪刀";
+                } else if (1<=randomNum && randomNum<2) {
+                    computerChoice = "石頭";
+                } else {
+                    computerChoice = "布";
+                }
+                return computerChoice;
+            }
+            
+
+            // 函數(函式)回傳 return
+
+            // function hello() {
+            //     console.log("你好");
+            //     return 87;
+            //     console.log(88);
+            // }
+
+            // let num = hello();
+            // console.log(num);
+            
+
+
+            // 函數(函式)參數 parameter
+            function calculateDiscount(price, discount=0.9) {
+                const discountPrice = price*discount;
+                return discountPrice;
+            }
+
+            let price = 6000;
+            let discount = 0.8;
+            console.log(calculateDiscount(price));
+            
+            alert("你好");
+
+        </script>
+    </body>
+</html>

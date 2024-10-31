@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primitive & Reference Types</title>
+    </head>
+    <body>
+        <script>
+            // 基本類型 & 引用類型 資料
+            // 基本類型 : 數字 字串 布林值...
+            // 引用類型 : 物件
+
+            let a = 10;
+            let b = a;
+            a = 20;
+            let c = {
+                name: "小白",
+                age: 25
+            };
+            let d = c;
+            c.name = "小黑";
+            d.age = 26;
+            console.log(c);
+            console.log(d);
+        </script>
+    </body>
+</html>

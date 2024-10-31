@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>變數(变量) variable</title>
+        <style>
+            button{
+                font-size:25px;
+                margin-right:10px;
+            }
+            p{
+                font-size: 25px;
+                display: inline-block;
+                margin-right:10px;
+            }
+            img{
+                height: 200px;
+                display: block;
+                margin-top:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick='
+            cart.showCart();
+            '>购物车总额</button>
+
+        <button onclick='
+            cart.productNum = 0;
+            cart.product1.num = 0;
+            cart.product2 .num= 0;
+            cart.totalPrice = 0;
+            console.log("已清空购物车");
+            cart.showCart();
+
+        '>清空购物车</button>
+
+        <img src="product_images/product_image1.jpg">
+        <p>$100</p>
+        <button onclick='
+            cart.product1.num++;
+            cart.productNum++;
+            cart.totalPrice += 100;
+            cart.showCart();
+        '>加入購物車</button>
+
+        <img src="product_images/product_image2.jpg">
+        <p>$200</p>
+        <button onclick='
+            cart.product2.num++;
+            cart.productNum++;
+            cart.totalPrice += 200;
+            cart.showCart();
+        '>加入購物車</button>
+        
+
+        <script>
+
+            // object 物件
+            let cart = {
+                productNum: 0,//商品总数量
+                product1:{
+                    num:0,//商品1数量
+                    name:"海底捞火锅",
+                    price:100
+                } ,
+                product2:{
+                    num:0,//商品2数量
+                    name:"氧气人参",
+                    price:200
+                },
+                totalPrice: 0,//总价格
+
+                showCart:function showCart() {
+                    console.log("----------------------------------");
+                    console.log(`目前商品數 : ${cart.productNum}`);
+                    console.log(`商品1${cart.product1.name}的数量为：${cart.product1.num}`);
+                    console.log(`商品2${cart.product2.name}的数量为：${cart.product2.num}`);
+                    console.log(`目前购物车的总额：${cart.totalPrice}`);
+                }
+            };
+
+            //用localStorage + JSON :将object 存储到本地仓库中,
+            // 只要有修改就必须要重新保存，所以要写成一个函数在每一对cart进行修改时进行保存
+            let jsonCart = JSON.stringify(cart);
+            localStorage.setItem("cart",jsonCart);
+            let getCartObject = JSON.parse(localStorage.getItem("cart"));
+            console.log(getCartObject);
+        </script>
+    </body>
+</html>

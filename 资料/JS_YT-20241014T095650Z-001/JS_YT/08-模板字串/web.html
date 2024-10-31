@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗</title>
+        <style>
+            button{
+                font-size:25px;
+                margin-right:10px;
+            }
+            p{
+                font-size: 25px;
+                display: inline-block;
+                margin-right:10px;
+            }
+            img{
+                height: 200px;
+                display: block;
+                margin-top:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            console.log(`目前購物車總額 : ${totalPrice}`);
+        ">購物車總額</button>
+        <button onclick="
+            totalPrice = 0;
+            console.log('已清空購物車');
+            console.log(`目前購物車總額 : ${totalPrice}`);
+        ">清空購物車</button>
+
+        <img src="product_images/product_image1.jpg">
+        <p>$100</p>
+        <button onclick="
+            totalPrice = totalPrice + 100;
+            console.log(`目前購物車總額 : ${totalPrice}`);
+        ">加入購物車</button>
+
+        <img src="product_images/product_image2.jpg">
+        <p>$200</p>
+        <button onclick="
+            totalPrice = totalPrice + 200;
+            console.log(`目前購物車總額 : ${totalPrice}`);
+        ">加入購物車</button>
+        
+
+        <script>
+            let totalPrice = 0;
+            let age = 25;
+            let height = 179;
+            let des = `
+                小白
+                好帥
+            `;
+            // console.log(des);
+        </script>
+    </body>
+</html>
